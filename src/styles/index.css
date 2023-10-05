@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS or Sass file (e.g., styles.css) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Apply the font to the entire app or specific elements */
+body {
+  font-family: 'Roboto', sans-serif;
+}
