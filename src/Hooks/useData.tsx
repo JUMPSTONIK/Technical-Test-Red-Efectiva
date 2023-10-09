@@ -49,10 +49,10 @@ export const useData = () => {
                 filteredPostsByUserId = [...filteredValues, ...filteredPostsByUserId]
                 
             }
-            filteredPostsByValue = filteredPostsByUserId.filter(item => item.body.includes(value) )
+            filteredPostsByValue = filteredPostsByUserId.filter(item => item.body.toUpperCase().includes(value.toUpperCase()) )
         }else{
             if (data) {
-                filteredPostsByValue = data.filter(item => item.body.includes(value) )
+                filteredPostsByValue = data.filter(item => item.body.toUpperCase().includes(value.toUpperCase()) )
             }
         }
         
