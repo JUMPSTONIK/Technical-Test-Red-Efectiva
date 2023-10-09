@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, FC } from "react";
 
 interface IComboBoxProps{
   userIds: number[],
@@ -7,7 +7,7 @@ interface IComboBoxProps{
 
 }
 
-const IdsComboBox = (props:IComboBoxProps) => {
+const IdsComboBox: FC<IComboBoxProps> = (props) => {
   const {userIds, selectedValue, handleSelectChange} = props; 
 
   

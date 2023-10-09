@@ -6,9 +6,11 @@ import BubblesContainer from './Containers/BubblesContainer';
 import CardsContainer from './Containers/CardsContainer';
 import FiltersContainer from './Containers/FiltersContainer';
 import IdsComboBox from './Components/IdsComboBox';
-import { useData } from './Hooks/useData';
 import Header from './Containers/Header';
 import IdsFilters from './Containers/IdsFilters';
+import { useData } from './Hooks/useData';
+import Main from './Containers/Main';
+import Tittle from './Components/Tittle';
 
 function App() {
 
@@ -27,10 +29,10 @@ function App() {
 
   return (
     <>
-      <div className=' w-screen bg-slate-100'>
-        <main className=' mx-auto w-full lg:max-w-5xl flex flex-col gap-10'>
+      <div className='w-screen bg-slate-100'>
+        <Main>
           <Header>
-            <h1 className=' font-bold text-3xl uppercase text-center'>Technical Test</h1>
+            <Tittle tittle="Technical Test"/>
             <FiltersContainer>
                 <SearchBar value={value} onChangeValue={handleInputChange}/>
                 <IdsFilters>
@@ -50,7 +52,7 @@ function App() {
           <CardsContainer>
             {posts?.map(post => <Card key={post.id} post={post}/>)}
           </CardsContainer>
-        </main>
+        </Main>
       </div>
     </>
   )
